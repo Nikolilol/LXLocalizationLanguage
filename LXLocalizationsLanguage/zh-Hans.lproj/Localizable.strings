@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LXLocalizationsLanguage
+
+  Created by Niko on 16/5/6.
+  Copyright © 2016年 niko. All rights reserved.
+*/
+"Hello World" = "嗨~ 世界!";
+"Change Button" = "Change to English";

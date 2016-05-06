@@ -16,8 +16,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"appLanguage"]) {
+        NSArray *languages = [NSLocale preferredLanguages];
+        NSString *language = [languages objectAtIndex:0];
+        if ([language hasPrefix:@"zh-Hans"]) {//开头匹配
+            [[NSUserDefaults standardUserDefaults] setObject:@"zh-Hans" forKey:@"appLanguage"];
+        }else{
+            [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:@"appLanguage"];
+        }
+    }
+    
+    [self toMain];
+    
     return YES;
+}
+
+- (void)toMain
+{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    ViewController *vC = [[ViewController alloc] init];
+
+    self.window.rootViewController = vC;
+    
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
