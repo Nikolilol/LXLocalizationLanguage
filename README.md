@@ -1,2 +1,5 @@
 # LXLocalizationsLanguage
-Use code to change iOS App Language.
+
+Use code force change iOS App Language.
+
+![localizationsLanguage.gif](Images/localizationsLanguage.gif)
