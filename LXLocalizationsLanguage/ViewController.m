@@ -62,7 +62,8 @@
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
     // refreash windows.
-    [delegate toMain];
+    ViewController *vc = [[ViewController alloc] init];
+    [delegate refresh:vc];
 }
 @end
 

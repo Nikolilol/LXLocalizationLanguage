@@ -12,6 +12,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-- (void)toMain;
+
+- (void)refresh:(UIViewController *)viewController;
+
 @end
 

@@ -28,18 +28,16 @@
         }
     }
     
-    [self toMain];
+    ViewController *vc = [[ViewController alloc] init];
+    [self refresh:vc];
     
     return YES;
 }
 
-- (void)toMain
-{
+- (void)refresh:(UIViewController *)viewController{
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
-    ViewController *vC = [[ViewController alloc] init];
-
-    self.window.rootViewController = vC;
+    
+    self.window.rootViewController = viewController;
     
     [self.window makeKeyAndVisible];
 }
