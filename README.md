@@ -1,6 +1,6 @@
 # LXLocalizationsLanguage
 
 Use code to change the application text language.<br>
-View more detail in source code.
+View more details in source code.
 
 ![localizationsLanguage.gif](localizationsLanguage.gif)
