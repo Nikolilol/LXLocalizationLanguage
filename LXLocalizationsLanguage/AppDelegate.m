@@ -20,7 +20,8 @@
     if (![[NSUserDefaults standardUserDefaults]objectForKey:@"appLanguage"]) {
         NSArray *languages = [NSLocale preferredLanguages];
         NSString *language = [languages objectAtIndex:0];
-        if ([language hasPrefix:@"zh-Hans"]) {//开头匹配
+        // judgement if is Chinese.
+        if ([language hasPrefix:@"zh-Hans"]) {
             [[NSUserDefaults standardUserDefaults] setObject:@"zh-Hans" forKey:@"appLanguage"];
         }else{
             [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:@"appLanguage"];
