@@ -1,18 +1,19 @@
-#LXLocalizationLanguage
+# LXLocalizationLanguage
 
-Use code to change the application text language.<br>
-
+### Use code to change the application text language.<br>
 ![localizationsLanguage.gif](localizationsLanguage.gif)<br>
-Integration step<br>
-- Create your ‘Localizable.strings’ file and create your strings in different languages.
-<br>
-- Define macro
+
+### Integration step<br>
+1. Create your ‘Localizable.strings’ file and create your strings in different languages.<br><br>
+2. Define macro
+
 ```
 #define Localized(key)  [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"]] ofType:@"lproj"]] localizedStringForKey:(key) value:nil table:@"Localizable"]
 And use this macro to define your string.
 ```
-- Implement function
-<br>
+
+3. Implement function<br>
+
 ```
 - (void)changeLanguage:(id)sender{
     // get current app language
@@ -34,7 +35,8 @@ And use this macro to define your string.
     [delegate refresh:vc];
 }
 ```
-4. Implement 
+
+4. Implement function<br>
 ```
 - (void)refresh:(UIViewController *)viewController;
 ```
